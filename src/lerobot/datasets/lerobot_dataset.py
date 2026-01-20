@@ -1030,10 +1030,7 @@ class LeRobotDataset(torch.utils.data.Dataset):
 
         query_indices = None
         if self.delta_indices is not None:
-            # Get absolute index from the item to correctly compute padding boundaries
-            # When episodes filter is used, idx is relative but we need absolute index
-            abs_idx = item["index"].item() if isinstance(item["index"], torch.Tensor) else item["index"]
-            query_indices, padding = self._get_query_indices(abs_idx, ep_idx)
+            query_indices, padding = self._get_query_indices(idx, ep_idx)
             query_result = self._query_hf_dataset(query_indices)
             item = {**item, **padding}
             for key, val in query_result.items():

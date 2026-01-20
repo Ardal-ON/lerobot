@@ -19,7 +19,6 @@ As per Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware (https
 The majority of changes here involve removing unused code, unifying naming, and adding helpful comments.
 """
 
-import logging
 import math
 from collections import deque
 from collections.abc import Callable
