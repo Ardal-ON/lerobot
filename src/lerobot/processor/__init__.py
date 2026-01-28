@@ -75,6 +75,7 @@ from .policy_robot_bridge import (
 )
 from .rename_processor import RenameObservationsProcessorStep
 from .tokenizer_processor import ActionTokenizerProcessorStep, TokenizerProcessorStep
+from .fast_action_tokenizer_processor import FastActionTokenizerProcessorStep
 
 __all__ = [
     "ActionProcessorStep",
@@ -119,6 +120,7 @@ __all__ = [
     "AddBatchDimensionProcessorStep",
     "RobotProcessorPipeline",
     "TokenizerProcessorStep",
+    "FastActionTokenizerProcessorStep",
     "ActionTokenizerProcessorStep",
     "Torch2NumpyActionProcessorStep",
     "RobotActionToPolicyActionProcessorStep",
